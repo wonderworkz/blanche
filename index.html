@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanche - Premium Dental Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            50% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-teal-50 text-slate-800 relative overflow-x-hidden">
+
+    <!-- Animated Background Elements -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-300/30 to-teal-300/30 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-purple-300/20 to-pink-300/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 right-0 w-72 h-72 bg-gradient-to-bl from-indigo-300/25 to-blue-300/25 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Glassmorphic Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/10 backdrop-blur-md py-5 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <img
+                src="https://drive.google.com/uc?export=view&id=1R-mq25aAllZh35ZW5Y-AdutzPwoaZ6dX"
+                alt="BLANCHE"
+                class="h-12 w-auto object-contain drop-shadow-lg"
+            />
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-700">
+                <span class="hover:text-teal-600 transition-colors cursor-pointer">Story</span>
+                <span class="hover:text-teal-600 transition-colors cursor-pointer">Formula</span>
+                <span class="hover:text-teal-600 transition-colors cursor-pointer">Reviews</span>
+                <span class="hover:text-teal-600 transition-colors cursor-pointer">Shop</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10 pt-20">
+            <div class="space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center px-5 py-2.5 bg-white/30 backdrop-blur-xl rounded-full shadow-lg border border-white/40">
+                    <svg class="w-4 h-4 text-teal-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                    </svg>
+                    <span class="text-xs font-bold tracking-widest text-slate-700 uppercase">Premium Dental Care</span>
+                </div>
+
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight text-slate-900 font-serif drop-shadow-sm">
+                    Reveal Your <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-blue-600 to-purple-600">
+                        Natural Radiance
+                    </span>
+                </h1>
+
+                <p class="text-lg lg:text-xl text-slate-700 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
+                    Experience the daily ritual that restores your smile's original brightness.
+                    Developed with the expertise of Gangnam Blanche Dental Clinic, we bring you a
+                    safe, natural brightening solution without the harshness.
+                </p>
+            </div>
+
+            <div class="relative group perspective-1000">
+                <div class="relative z-10 transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-teal-400/20 rounded-3xl blur-2xl"></div>
+                    <img
+                        src="https://ecimg.cafe24img.com/pg2067b20795056043/soonbaek100/web/product/big/20251216/e711439858ec3a8febbeee442a519880.png"
+                        alt="Blanche Toothpaste"
+                        class="relative w-full max-w-lg mx-auto drop-shadow-2xl"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-slate-500">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Brand Story Section -->
+    <section class="py-32 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-white/40 backdrop-blur-2xl rounded-[3rem] p-12 md:p-16 shadow-2xl border border-white/50">
+                <div class="text-center">
+                    <span class="text-teal-600 font-bold tracking-wider text-sm uppercase mb-4 block">The Blanche Story</span>
+                    <h3 class="text-3xl md:text-5xl font-bold text-slate-900 mb-10 font-serif leading-tight">
+                        "Why is professional oral care<br/>so hard to find at home?"
+                    </h3>
+                    <div class="max-w-3xl mx-auto text-slate-700 leading-8 text-lg">
+                        <p class="mb-6">
+                            This question sparked the beginning of Blanche.
+                            At <strong>Blanche Dental Clinic in Gangnam</strong>, we met countless patients longing for a brighter smile
+                            but afraid of the sensitivity caused by harsh chemical treatments.
+                        </p>
+                        <p class="mb-6">
+                            We believe that true beauty comes from health. That's why we refused to compromise.
+                            Instead of aggressive bleaching agents, we utilized <strong>Remineralization Technology</strong> combined with nature's finest ingredients.
+                        </p>
+                        <p>
+                            Blanche is more than just a toothpaste. It is a daily wellness ritual designed to
+                            balance your oral microbiome and gently polish your teeth to their natural, luminous state.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto">
+                        <div class="p-6 bg-white/50 backdrop-blur-xl rounded-2xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <svg class="w-8 h-8 text-blue-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            <h4 class="font-bold text-slate-800">Expertise</h4>
+                            <p class="text-xs text-slate-600 mt-1">Developed by Dentists</p>
+                        </div>
+                        <div class="p-6 bg-white/50 backdrop-blur-xl rounded-2xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <svg class="w-8 h-8 text-teal-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            </svg>
+                            <h4 class="font-bold text-slate-800">Natural</h4>
+                            <p class="text-xs text-slate-600 mt-1">27 Plant Extracts</p>
+                        </div>
+                        <div class="p-6 bg-white/50 backdrop-blur-xl rounded-2xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-300 col-span-2 md:col-span-1">
+                            <svg class="w-8 h-8 text-purple-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            </svg>
+                            <h4 class="font-bold text-slate-800">Safe</h4>
+                            <p class="text-xs text-slate-600 mt-1">No Harmful Chemicals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-slate-900 font-serif">The Blanche Formula™</h2>
+                <p class="mt-4 text-slate-700 text-lg">Three pillars of our premium dental solution</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white/30 backdrop-blur-2xl rounded-[2rem] p-10 shadow-xl border border-white/50 hover:shadow-2xl hover:bg-white/40 transition-all duration-500 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400/40 to-blue-600/40 backdrop-blur-xl rounded-2xl flex items-center justify-center mb-8 border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-blue-700 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Brightening, Not Bleaching</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        We don't strip your enamel. Our formula uses <strong>Hydroxyapatite (HAP)</strong> to fill micro-crevices in your teeth.
+                        This remineralization process restores the smooth surface and reflects light better, bringing back your natural, pearly white tone without sensitivity.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white/30 backdrop-blur-2xl rounded-[2rem] p-10 shadow-xl border border-white/50 hover:shadow-2xl hover:bg-white/40 transition-all duration-500 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400/40 to-teal-600/40 backdrop-blur-xl rounded-2xl flex items-center justify-center mb-8 border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-teal-700 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">27 Natural Ingredients</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Your mouth is absorbent. That's why we packed <strong>27 natural ingredients</strong> including Green Tea, Chamomile, and Rosemary.
+                        We use Coconut-derived surfactants instead of harsh SLS, ensuring your mouth stays hydrated and fresh all day long.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white/30 backdrop-blur-2xl rounded-[2rem] p-10 shadow-xl border border-white/50 hover:shadow-2xl hover:bg-white/40 transition-all duration-500 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400/40 to-purple-600/40 backdrop-blur-xl rounded-2xl flex items-center justify-center mb-8 border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                        <div class="text-3xl group-hover:scale-110 transition-transform drop-shadow-lg">🌸</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Signature Fragrance</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Boring mint is a thing of the past. Blanche offers a <strong>sophisticated floral-mint blend</strong> created by professional perfumers.
+                        It leaves a subtle, elegant scent that lingers pleasantly, transforming your brushing routine into a moment of luxury.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredient Checklist Section -->
+    <section class="py-32 relative overflow-hidden">
+        <!-- Dark gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-95"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-900/30 to-transparent"></div>
+
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center relative z-10">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 font-serif text-white">Uncompromising Standards</h2>
+                <p class="text-slate-300 text-lg mb-10 leading-relaxed">
+                    We believe that what we leave out is just as important as what we put in.
+                    Blanche is meticulously formulated for your safety and peace of mind.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4 bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <div class="bg-teal-500/30 backdrop-blur-xl p-2 rounded-full border border-teal-400/50">
+                            <svg class="w-4 h-4 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="font-medium text-lg text-white">SLS Free</span>
+                    </div>
+                    <div class="flex items-center space-x-4 bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <div class="bg-teal-500/30 backdrop-blur-xl p-2 rounded-full border border-teal-400/50">
+                            <svg class="w-4 h-4 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="font-medium text-lg text-white">No Tar Colorants</span>
+                    </div>
+                    <div class="flex items-center space-x-4 bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <div class="bg-teal-500/30 backdrop-blur-xl p-2 rounded-full border border-teal-400/50">
+                            <svg class="w-4 h-4 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="font-medium text-lg text-white">No Parabens</span>
+                    </div>
+                    <div class="flex items-center space-x-4 bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <div class="bg-teal-500/30 backdrop-blur-xl p-2 rounded-full border border-teal-400/50">
+                            <svg class="w-4 h-4 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="font-medium text-lg text-white">No Triclosan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative flex justify-center items-center">
+                <div class="bg-white/10 backdrop-blur-2xl p-6 rounded-3xl border border-white/30 overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl">
+                    <img
+                        src="https://ecimg.cafe24img.com/pg2067b20795056043/soonbaek100/web/product/extra/big/20251120/334705b75e39a837bf463b525fc6e460.png"
+                        alt="Quality Standards"
+                        class="w-full max-w-sm rounded-2xl object-cover"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col items-center mb-16">
+                <div class="bg-white/40 backdrop-blur-xl p-4 rounded-full mb-4 border border-white/50 shadow-lg">
+                    <svg class="w-8 h-8 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900 font-serif">#BlancheMoments</h2>
+                <p class="mt-2 text-slate-700">Join our community of brighter smiles</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden border border-white/50 shadow-xl hover:shadow-2xl hover:bg-white/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative group">
+                        <img
+                            src="https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=600&auto=format&fit=crop"
+                            alt="Review"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 text-white backdrop-blur-sm">
+                            <div class="flex items-center bg-white/20 backdrop-blur-xl px-4 py-2 rounded-full border border-white/30">
+                                <svg class="w-5 h-5 fill-white mr-2" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg> 128
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-teal-400/50 to-blue-400/50 backdrop-blur-xl flex items-center justify-center text-xs font-bold text-slate-800 mr-2 border border-white/40">
+                                D
+                            </div>
+                            <span class="text-sm font-bold text-slate-800">daily_mood</span>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed mb-4 line-clamp-3">
+                            Finally found a toothpaste that looks as good as it feels. 🌿 It's not just about the design; the aftertaste is so clean and the floral scent is a game changer. My bathroom vanity has never looked better.
+                        </p>
+                        <div class="flex text-blue-600 text-xs font-medium space-x-2">
+                            <span>#BlancheToothpaste</span>
+                            <span>#OralCare</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden border border-white/50 shadow-xl hover:shadow-2xl hover:bg-white/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative group">
+                        <img
+                            src="https://images.unsplash.com/photo-1606214533800-84dc248d2d65?q=80&w=600&auto=format&fit=crop"
+                            alt="Review"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 text-white backdrop-blur-sm">
+                            <div class="flex items-center bg-white/20 backdrop-blur-xl px-4 py-2 rounded-full border border-white/30">
+                                <svg class="w-5 h-5 fill-white mr-2" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg> 245
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-teal-400/50 to-blue-400/50 backdrop-blur-xl flex items-center justify-center text-xs font-bold text-slate-800 mr-2 border border-white/40">
+                                H
+                            </div>
+                            <span class="text-sm font-bold text-slate-800">home_cafe_j</span>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed mb-4 line-clamp-3">
+                            Gifted this to my friends and they all loved it! 🎁 It's gentle on my sensitive teeth but definitely helps with brightening. No more harsh chemicals for me.
+                        </p>
+                        <div class="flex text-blue-600 text-xs font-medium space-x-2">
+                            <span>#BlancheToothpaste</span>
+                            <span>#OralCare</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden border border-white/50 shadow-xl hover:shadow-2xl hover:bg-white/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative group">
+                        <img
+                            src="https://images.unsplash.com/photo-1571781926291-280553d400d4?q=80&w=600&auto=format&fit=crop"
+                            alt="Review"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 text-white backdrop-blur-sm">
+                            <div class="flex items-center bg-white/20 backdrop-blur-xl px-4 py-2 rounded-full border border-white/30">
+                                <svg class="w-5 h-5 fill-white mr-2" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg> 89
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-teal-400/50 to-blue-400/50 backdrop-blur-xl flex items-center justify-center text-xs font-bold text-slate-800 mr-2 border border-white/40">
+                                L
+                            </div>
+                            <span class="text-sm font-bold text-slate-800">lifestyle_su</span>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed mb-4 line-clamp-3">
+                            The best part of my morning routine. ✨ The natural ingredients make my mouth feel fresh without that stinging sensation. Plus, it restores the natural brightness of my teeth!
+                        </p>
+                        <div class="flex text-blue-600 text-xs font-medium space-x-2">
+                            <span>#BlancheToothpaste</span>
+                            <span>#OralCare</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden border border-white/50 shadow-xl hover:shadow-2xl hover:bg-white/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative group">
+                        <img
+                            src="https://images.unsplash.com/photo-1595867362879-13ae53b92f9e?q=80&w=600&auto=format&fit=crop"
+                            alt="Review"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 text-white backdrop-blur-sm">
+                            <div class="flex items-center bg-white/20 backdrop-blur-xl px-4 py-2 rounded-full border border-white/30">
+                                <svg class="w-5 h-5 fill-white mr-2" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg> 312
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-teal-400/50 to-blue-400/50 backdrop-blur-xl flex items-center justify-center text-xs font-bold text-slate-800 mr-2 border border-white/40">
+                                M
+                            </div>
+                            <span class="text-sm font-bold text-slate-800">minimal_k</span>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed mb-4 line-clamp-3">
+                            Empty bottle review! Already on my 3rd tube. It's rare to find a functional toothpaste that is also vegan and eco-friendly. Highly recommended for daily brightening care.
+                        </p>
+                        <div class="flex text-blue-600 text-xs font-medium space-x-2">
+                            <span>#BlancheToothpaste</span>
+                            <span>#OralCare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-32 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 font-serif mb-4">Choose Your Package</h2>
+                <p class="text-slate-700">Start your journey to a naturally radiant smile.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+
+                <!-- Single Pack -->
+                <div class="bg-white/30 backdrop-blur-2xl rounded-3xl p-8 border border-white/50 shadow-xl hover:shadow-2xl hover:bg-white/40 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-slate-900">Starter</h3>
+                        <p class="text-slate-600 text-sm mt-1">Perfect for trying it out</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="text-4xl font-bold text-slate-900">₩18,000</div>
+                        <div class="text-slate-600 text-sm mt-2">1 Tube (120g)</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-sm text-slate-700">
+                            <svg class="w-4 h-4 text-teal-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Daily Brightening Care
+                        </li>
+                        <li class="flex items-center text-sm text-slate-700">
+                            <svg class="w-4 h-4 text-teal-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Standard Shipping
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3 Pack - Highlighted -->
+                <div class="bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-2xl rounded-3xl p-8 border-2 border-white/60 shadow-2xl relative transform md:-translate-y-4 hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold tracking-wide shadow-xl border border-white/30">
+                        MOST POPULAR
+                    </div>
+                    <div class="text-center mb-6 mt-2">
+                        <h3 class="text-xl font-bold text-slate-900">Couple Set</h3>
+                        <p class="text-blue-700 text-sm mt-1 font-medium">Save 5%</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="text-slate-600 line-through text-sm">₩54,000</div>
+                        <div class="text-5xl font-bold text-slate-900">₩51,300</div>
+                        <div class="text-slate-600 text-sm mt-2">3 Tubes (120g x 3)</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-sm text-slate-800">
+                            <svg class="w-4 h-4 text-blue-700 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <strong>Free Shipping</strong>
+                        </li>
+                        <li class="flex items-center text-sm text-slate-800">
+                            <svg class="w-4 h-4 text-blue-700 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Great for couples
+                        </li>
+                        <li class="flex items-center text-sm text-slate-800">
+                            <svg class="w-4 h-4 text-blue-700 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            5% Discount Applied
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 6 Pack (Family) -->
+                <div class="bg-white/30 backdrop-blur-2xl rounded-3xl p-8 border border-white/50 shadow-xl hover:shadow-2xl hover:bg-white/40 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-slate-900">Family Set</h3>
+                        <p class="text-teal-700 text-sm mt-1 font-medium">Save 10%</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="text-slate-600 line-through text-sm">₩108,000</div>
+                        <div class="text-4xl font-bold text-slate-900">₩97,200</div>
+                        <div class="text-slate-600 text-sm mt-2">6 Tubes (120g x 6)</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-sm text-slate-700">
+                            <svg class="w-4 h-4 text-teal-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <strong>Free Shipping</strong>
+                        </li>
+                        <li class="flex items-center text-sm text-slate-700">
+                            <svg class="w-4 h-4 text-teal-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Stock up for the family
+                        </li>
+                        <li class="flex items-center text-sm text-slate-700">
+                            <svg class="w-4 h-4 text-teal-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            10% Discount Applied
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center bg-white/20 backdrop-blur-xl rounded-3xl p-8 border border-white/40">
+                <p class="text-sm text-slate-700 mb-2">
+                    © Blanche. All rights reserved.
+                </p>
+                <p class="text-xs text-slate-600">
+                    Customer Service: 070-8058-9258 | Gangnam-gu, Seoul, Korea
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Navbar Scroll Effect -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-white/10', 'py-5', 'border-white/10');
+                navbar.classList.add('bg-white/40', 'shadow-lg', 'border-white/20', 'py-3');
+            } else {
+                navbar.classList.remove('bg-white/40', 'shadow-lg', 'border-white/20', 'py-3');
+                navbar.classList.add('bg-white/10', 'py-5', 'border-white/10');
+            }
+        });
+    </script>
+</body>
+</html>
